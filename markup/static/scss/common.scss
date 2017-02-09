@@ -1,0 +1,32 @@
+// Common styles of the project
+html,
+body {
+    height: 100%;
+    @media screen and (max-width: 800px) {
+        &.main {
+            background: #030609 url("../images/general/background-mobile.jpg") no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+    @media screen and (min-width: 1500px) {
+        &.main {
+            background-size: cover;
+        }
+    }
+}
+.wrapper {
+    position: relative;
+
+    width: 1180px;
+    margin: auto;
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+    }
+    @media screen and (max-width: 1024px) {
+        width: 95%;
+    }
+    @media screen and (max-width: 800px) {
+        width: 100%;
+    }
+}

@@ -1,0 +1,72 @@
+// GUI stylies of the project
+// For example, styles of the links, buttons and so on.
+
+.title {
+	display: inline-block;
+
+	margin-top: 44px;
+	margin-bottom: 69px;
+
+	letter-spacing: .2em;
+	text-transform: uppercase;
+
+	border-top: 1px solid #b0b0b0;
+	border-bottom: 1px solid #b0b0b0;
+
+	font-family: "Lato-Black";
+	font-size: em(48px);
+
+	@media screen and (max-width: 800px) {
+		font-size: em(28px);
+		margin-bottom: 49px;
+	}
+}
+
+.paragraph {
+	display: block;
+
+	margin-bottom: 30px;
+
+	letter-spacing: .05em;
+
+	color: #2f2f2f;
+
+	font-family: "Lato-Regular";
+	font-size: em(18px);
+}
+
+.strong {
+	font-family: "Lato-Black";
+
+	@extend .paragraph;
+}
+
+em {
+	font-family: 'Lato-Italic';
+
+	@extend .paragraph;
+}
+
+ul {
+	@extend .paragraph;
+	@include nl;
+	margin: 50px 0;
+	li {
+		position: relative;
+
+		margin-bottom: 15px;
+		padding-left: 44px;
+		&:before {
+			top: 5px;
+			left: 1px;
+
+			width: 12px;
+			height: 12px;
+
+			border-radius: 50%;
+			background: $green;
+
+			@include content;
+		}
+	}
+}

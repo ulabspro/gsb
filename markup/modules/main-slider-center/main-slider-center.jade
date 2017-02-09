@@ -1,0 +1,19 @@
+mixin main-slider-center(mod, containsLogin)
+	- containsLogin = containsLogin || false; 
+	- var mod = mod || 'shadow';
+	- mod = mod ? ('main-slider-center--'+mod):'';
+	- if(containsLogin)mod+=' main-slider-center--containsLogin'
+	section.main-slider-center(class=mod)
+		
+		.main-slider-center__wrapper
+			if containsLogin
+				a(href="#" title="").login для клиентов и сотрудников
+			.main-slider-center__title гранд сервис билдинг фм
+			.main-slider-center__slogan управление и эксплуатация объектов недвижимости
+			div.main-slider-center__link
+				a(href="#" title="") Аренда помещений
+
+		//-.main-slider-center-slide
+			- for (var i = 1; i < 12; i++) {
+			img(src="%=staticPrefix=%images/content/main-slider-center#{i}.jpg")
+			- }

@@ -1,0 +1,27 @@
+mixin header(page, hideLogin)
+	- hideLogin = hideLogin || false; 
+	- var page = page || ''
+	- if (page == 'about') var about = 'active'
+	- if (page == 'objects') var objects = 'active'
+	- if (page == 'engineering-services') var engineering = 'active'
+	header.header(class= (hideLogin?(page+' header--withoutLogin'):page))
+		.header__wrapper
+			a(href="/index.html" title="GSB").logo
+			.menu__mobile-icon(class = hideLogin?"menu__mobile-icon--black":"")
+			nav.menu
+				.menu__mobile-close
+				a(href="/about.html" title="" class="#{about}").menu__item О компании
+				a(href="/objects.html" title="" class="#{objects}").menu__item Наши объекты
+				a(href="/engineering-services.html" title="" class="#{engineering}").menu__item Инженерный сервис
+				a(href="/market.html" title="").menu__item Магазин канцтовары
+			.language-change
+				a(href="#" title="").language-change__item.active Ru
+				a(href="#" title="").language-change__item En
+			if !hideLogin
+				a(href="#" title="").login для клиентов и сотрудников
+		- if (page == 'main') {
+		//-.main-slider-header
+			- for (var i = 1; i < 12; i++) {
+			img(src="%=staticPrefix=%images/content/main-slider-header#{i}.jpg")
+			- }
+		- }

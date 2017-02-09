@@ -1,0 +1,23 @@
+mixin object-content()
+	section.object-content
+		.object-content__title
+			h1.title Z-Plaza
+		.object-content__wrapper
+			.object-content-slider
+				a(href="%=staticPrefix=%images/content/object-slider-resize0.jpg" rel="galery-1" title="Название изображения").swipebox.object-content-slider__big
+					img(src="%=staticPrefix=%images/content/object-slider-small0.jpg")
+				- for (var i = 1; i < 6; i++) {
+				a(href="%=staticPrefix=%images/content/object-slider-resize#{i}.jpg" rel="galery-1" title="Название изображения").swipebox.object-content-slider__small
+					img(src="%=staticPrefix=%images/content/object-slider-small#{i}.jpg")
+				- }
+			.object-content-description
+				p Много солнечного света , оригинальная и качественная отделка внутренних помещений, уютная инфраструктура, хорошая транспортная доступность- эти и другие преимущества обеспечивают арендаторам комфортные условия для работы.
+
+				a(href="#" title="").object-content-description__scheme схема проезда
+
+				.object-content-description__address ул. Бутырская, д.62
+				.object-content-description__phone (499) 995-03-48 
+
+		- for(var i=0; i < 14; i++) {
+		+object-small()
+		- }

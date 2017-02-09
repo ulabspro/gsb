@@ -1,0 +1,8 @@
+mixin objects-content()
+	section.objects-content
+		.objects-content__title
+			h1.title Наши объекты
+	
+		- for(var i=0; i < 14; i++) {
+		+object-small()
+		- }

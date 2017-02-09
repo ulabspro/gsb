@@ -1,0 +1,53 @@
+.object-small {
+	box-sizing: border-box;
+	width: 25%;
+	padding: 44px 23px 15px 22px;
+
+	text-align: center;
+	text-decoration: none;
+	@media screen and (max-width: 1200px) {
+		width: 33%;
+	}
+	@media screen and (max-width: 1024px) {
+		width: 33%;
+	}
+	@media screen and (max-width: 800px) {
+		width: 50%;
+	}
+	@media screen and (max-width: 480px) {
+		width: 90%;
+		margin: auto;
+	}
+	&:hover {
+		background: #ededed;
+		box-shadow: 0 0 5px #e5e5e5;
+	}
+	&__img {
+		line-height: 0;
+	}
+	&__name {
+		display: block;
+
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		color: #2f2f2f;
+		border-bottom: 2px solid #2f2f2f;
+
+		font-family: "Lato-Black";
+		font-size: em(16px);
+	}
+	&__contact {
+		padding-top: 11px;
+		span {
+			display: block;
+
+			margin-bottom: 2px;
+
+			color: #2f2f2f;
+
+			font-family: "Lato-Regular";
+			font-size: em(14px);
+		}
+	}
+}

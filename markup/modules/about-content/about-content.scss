@@ -1,0 +1,51 @@
+.about-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	@extend .wrapper;
+	&__title {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.about-content-sidebar {
+	width: 278px;
+	@media screen and (max-width: 800px) {
+		width: 90%;
+		margin: auto;
+		text-align: center;
+	}
+	&__item {
+		display: block;
+		font-family: 'Lato-Black';
+		font-size: em(14px);
+		color: #195b9f;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 15px 20px;
+		border: 5px solid transparent;
+		letter-spacing: .2em;
+
+		&:hover, &.active {
+			border: 5px solid #7ea3c9;
+		}
+	}
+}
+
+.about-content-body {
+	width: 855px;
+
+	@media screen and (max-width: 800px) {
+		width: 90%;
+		margin: auto;
+	}
+
+	p {
+		@extend .paragraph;
+	}
+
+	strong {
+		@extend .strong;
+	}
+}

@@ -1,0 +1,23 @@
+.objects-content {
+	display: flex;
+
+	align-items: flex-start;
+	@extend .wrapper;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+	@media screen and (max-width: 800px) {
+		
+	}
+
+	@media screen and (max-width: 480px) {
+		display: block;
+	}
+
+	&__title {
+		width: 100%;
+		margin-bottom: -44px;
+
+		text-align: center;
+	}
+}

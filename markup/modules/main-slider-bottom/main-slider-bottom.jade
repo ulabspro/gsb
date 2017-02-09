@@ -1,0 +1,16 @@
+mixin main-slider-bottom()
+	section.main-slider-bottom
+		.main-slider-bottom__wrapper
+			.main-slider-bottom__title наши бизнес-центры
+			.carousel
+				- for (var i = 1; i < 9; i++) {
+				a(href="#" title="").carousel__item
+					.carousel__item__img
+						img(src="%=staticPrefix=%images/content/carousel#{i}.jpg")
+					.carousel__item__name WEST PARK
+				- }
+
+		//-.main-slider-bottom-slide
+			- for (var i = 1; i < 12; i++) {
+			img(src="%=staticPrefix=%images/content/main-slider-bottom#{i}.jpg")
+			- }

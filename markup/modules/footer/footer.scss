@@ -1,0 +1,58 @@
+.footer {
+	width: 100%;
+	margin-top: 100px;
+	padding-top: 34px;
+	padding-bottom: 20px;
+
+	background: #000;
+	&.main {
+		margin-top: 0;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		.footer__copyright {
+			margin-top: 0;
+		}
+		@media screen and (max-width: 800px) {
+			position: absolute;
+			bottom: 0;
+		}
+		@media screen and (max-width: 480px) {
+			position: relative;
+
+			margin-top: 25px;
+		}
+		@media screen and (min-width: 800px) {
+			position: fixed;
+			bottom: 0px;
+		}
+	}
+	&__copyright {
+		margin-top: 26px;
+
+		text-align: center;
+
+		color: #fff;
+
+		font-family: "Lato-Hairline";
+		font-size: em(8px);
+	}
+}
+
+.footer-social {
+	margin: auto;
+
+	text-align: center;
+	&__item {
+		display: inline-block;
+
+		margin: 0 7px;
+
+		vertical-align: middle;
+		&--twitter {
+			@include bg($twitter);
+		}
+		&--facebook {
+			@include bg($facebook);
+		}
+	}
+}

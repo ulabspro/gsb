@@ -1,0 +1,17 @@
+.slider-main {
+	position: fixed !important;
+	z-index: -1;
+	top: 0;
+
+	overflow: hidden;
+
+	width: 100%;
+	height: 100%;
+	img {
+		width: auto;
+		height: 100%;
+	}
+	@media screen and (max-width: 960px) {
+		display: none !important;
+	}
+}

@@ -1,0 +1,121 @@
+.main-slider-center {
+	position: relative;
+
+	// height: 356px;
+	height: 310px;
+	@media screen and (max-width: 800px) {
+		height: auto;
+	}
+
+	@media screen and (min-width: 800px) {
+		&--shadow {
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+		&--containsLogin {
+			padding-top: 60px;
+			margin-bottom: 100px;
+		}
+	}
+
+	&__wrapper {
+		text-align: center;
+
+		@extend .wrapper;
+	}
+	&__title {
+		// padding-top: 100px;
+		padding-top: 50px;
+		padding-bottom: 5px;
+
+		text-align: center;
+		letter-spacing: .05em;
+		text-transform: uppercase;
+
+		color: #fff;
+
+		font-family: "Lato-Hairline";
+		font-size: em(71px);
+		@media screen and (max-width: 1024px) {
+			font-size: em(60px);
+		}
+		@media screen and (max-width: 800px) {
+			font-family: "Lato-Black";
+			font-size: em(70px);
+		}
+		@media screen and (max-width: 480px) {
+			padding-top: 40px;
+
+			letter-spacing: normal;
+
+			font-family: "Lato-Black";
+			font-size: em(50px);
+		}
+	}
+	&__slogan {
+		display: inline;
+
+		height: 23px;
+		padding-right: 29px;
+		padding-left: 32px;
+
+		letter-spacing: .9em;
+		text-transform: uppercase;
+
+		color: #000;
+		background: $green;
+
+		font-family: "Lato-Light";
+		font-size: em(14px);
+		line-height: 23px;
+		@media screen and (max-width: 1024px) {
+			letter-spacing: .65em;
+		}
+		@media screen and (max-width: 800px) {
+			height: auto;
+			padding: 0;
+
+			letter-spacing: .3em;
+
+			color: #fff;
+			background: none;
+
+			line-height: normal;
+		}
+	}
+	&__link {
+		padding-top: 60px;
+		@media screen and (max-width: 800px) {
+			display: none;
+		}
+		a {
+			padding-bottom: 2px;
+
+			text-decoration: none;
+			letter-spacing: .2em;
+			text-transform: uppercase;
+
+			color: #fff;
+			border-bottom: 1px solid #8b863d;
+
+			font-family: "PFDinDisplayPro-Black";
+		}
+	}
+}
+
+.main-slider-center-slide {
+	position: absolute !important;
+	z-index: -1;
+	top: 0;
+
+	overflow: hidden;
+
+	width: 100%;
+	height: 356px;
+	img {
+		width: auto;
+		height: 356px;
+	}
+	@media screen and (max-width: 800px) {
+		display: none !important;
+	}
+}
